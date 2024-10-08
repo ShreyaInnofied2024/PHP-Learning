@@ -8,3 +8,4 @@ DisplayTAble.php file connects to database and display the product details to th
 Delete folder conatins the files to delete some product from the database. Execute Delete.php first.
 Forms.php file contains a form to validate email and name nad display the data.
 OOPS folder contains the concepts of OOPS and Object.php in that contains the functionalities to add, update and delete product details to the database.
+To Execute AddProduct functionality uncomment the AddProduct function at the last of the Object.php. similar for update comment update function and to delete uncomment delete functionalities.
