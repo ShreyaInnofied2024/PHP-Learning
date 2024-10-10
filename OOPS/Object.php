@@ -1,5 +1,5 @@
 <?php
-class Database {
+class Database {                                //Class for Database Connection
     private $server_name;
     private $user_name;
     private $password;
@@ -13,7 +13,7 @@ class Database {
         $this->db_name = $db_name;
     }
 
-    public function connect() {
+    public function connect() {       //function to connect database
         try {
             $this->conn = new PDO("mysql:host={$this->server_name};dbname={$this->db_name}", $this->user_name, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -22,11 +22,11 @@ class Database {
         }
     }
 
-    public function disconnect() {
+    public function disconnect() {    //function to disconnect database
         $this->conn = null; 
     }
 
-    public function get_connection() {
+    public function get_connection() {     //function to get connection from database
         return $this->conn;
     }
 }
@@ -47,7 +47,7 @@ class Product
         $this->price = $price;
     }
 
-    public function add_product($product_id, $product_name, $quantity, $price)
+    public function add_product($product_id, $product_name, $quantity, $price)   //function to add product product to database using Form
     {
         try {
             $db=new Database();
@@ -70,7 +70,7 @@ class Product
         $db->disconnect();
     }
 
-    public function update_product($product_id, $product_name, $quantity, $price)
+    public function update_product($product_id, $product_name, $quantity, $price)      //function to update product product to database using Form
     {
         try {
             $db=new Database();
@@ -102,7 +102,7 @@ class Product
         $db->disconnect();
     }
 
-    public function delete_product($product_id)
+    public function delete_product($product_id)            //function to delete product product to database using Form
     {
         try {
             $db=new Database();
