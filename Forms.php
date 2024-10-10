@@ -9,11 +9,11 @@
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
-      $nam_err = "Name is required";
+      $nam_err = "Name is required";          //if name is empty
     } else {
       $name = test_input($_POST["name"]);
       if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-        $name_err = "Only letters and white space allowed";
+        $name_err = "Only letters and white space allowed";     //if contains anything other than mentioned in pattern
       }
     }
 
@@ -21,7 +21,7 @@
       $email_err = "Email is required";
     } else {
       $email = test_input($_POST["email"]);
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {         //Build-In function for filtering emails
         $email_err = "Invalid email format";
       }
     }
