@@ -1,11 +1,11 @@
 <?php
-abstract class Car
+abstract class Car                                    //Abstract Class
 {
     public $name;
-    abstract public function message();
+    abstract public function message();                //Abstract Method
 }
 
-class Audi extends Car
+class Audi extends Car                                 //Child Class
 {
     public function message()
     {
@@ -13,7 +13,7 @@ class Audi extends Car
     }
 }
 
-class Suzuki extends Car
+class Suzuki extends Car                            //Child Class
 {
     public function message()
     {
