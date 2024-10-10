@@ -1,10 +1,10 @@
 <?php
-interface Animal
+interface Animal                              //Interface
 {
     public function make_sound();
 }
 
-class Dog implements Animal
+class Dog implements Animal                   //Class implementing Interface
 {
     public function make_sound()
     {
@@ -12,7 +12,7 @@ class Dog implements Animal
     }
 }
 
-class Cat implements Animal
+class Cat implements Animal                  //Class implementing Interface
 {
     public function make_sound()
     {
