@@ -131,6 +131,7 @@ class Product
 }
 
 $Phone = new Product($_POST['productId'], $_POST['name'], $_POST['quantity'], $_POST['price']);
+//uncomment the below function one by one to use each
 //$Phone->add_product($_POST['productId'],$_POST['name'],$_POST['quantity'],$_POST['price']);
 //$Phone->update_product($_POST['ID'],'Apple',5,90000);
 //$Phone->delete_product($_POST['Id']);
