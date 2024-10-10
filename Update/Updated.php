@@ -2,10 +2,10 @@
 $server_name = "localhost";
 $user_name = "root";
 $password = "password";
-$product_id = $_POST["productId"];
-$product_name = $_POST["name"];
-$quantity = $_POST["quantity"];
-$price = $_POST["price"];
+$product_id = $_POST["productId"];                  // input form Form
+$product_name = $_POST["name"];                     //input from Form
+$quantity = $_POST["quantity"];                     //input from Form
+$price = $_POST["price"];                           //input from Form
 try {
     $conn = new PDO("mysql:host=$server_name;dbname=Products", $user_name, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
