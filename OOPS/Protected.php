@@ -1,16 +1,16 @@
 <?php
-class Fruit
+class Fruit                            //Class
 {
     public $name;
     public $color;
 
-    public function __construct($name, $color)
+    public function __construct($name, $color)      //Constructor
     {
         $this->name = $name;
         $this->color = $color;
     }
 
-    protected function message()
+    protected function message()                      //Protected function
     {
         echo "{$this->name} is of {$this->color} color <br>";
     }
@@ -23,7 +23,7 @@ class Apple extends Fruit
     public function intro($taste)
     {
         echo "{$this->name} is of {$taste} taste <br>";
-        $this->message();
+        $this->message();                              //Protected function is inherited by child class
     }
 }
 
