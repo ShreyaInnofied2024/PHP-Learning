@@ -3,15 +3,15 @@ $server_name = "localhost";
 $user_name = "root";
 $password = "password";
 
-$product_id = $_POST["productId"];
+$product_id = $_POST["productId"];    //Input from form data
 $product_name = $_POST["name"];
 $quantity = $_POST["quantity"];
 $price = $_POST["price"];
 
 try {
-    $conn = new PDO("mysql:host=$server_name;dbname=Products", $user_name, $password);
+    $conn = new PDO("mysql:host=$server_name;dbname=Products", $user_name, $password);    //Database Connection
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO Product (ProductId, ProductName, Quantity, Price)
+    $sql = "INSERT INTO Product (ProductId, ProductName, Quantity, Price)       //SQL Query
             VALUES (:ProductId, :ProductName, :Quantity, :Price)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':ProductId', $product_id);
