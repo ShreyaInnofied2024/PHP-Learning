@@ -1,5 +1,5 @@
 <?php
-trait Msg_1
+trait Msg_1                                          //Trait 1
 {
     public function message_1()
     {
@@ -7,7 +7,7 @@ trait Msg_1
     }
 }
 
-trait Msg_2
+trait Msg_2                                          //Trait 2
 {
     public function message_2()
     {
@@ -15,12 +15,12 @@ trait Msg_2
     }
 }
 
-class First
+class First                                        //Class implementing trait 1
 {
     use Msg_1;
 }
 
-class Second
+class Second                                       //class implementing Trait 1 and Trait 2
 {
     use Msg_1, Msg_2;
 }
