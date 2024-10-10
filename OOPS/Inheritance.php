@@ -1,5 +1,5 @@
 <?php
-class Fruit
+class Fruit                                                            //Parent Class
 {
     public $name;
     public $color;
@@ -16,7 +16,7 @@ class Fruit
     }
 }
 
-class Apple extends Fruit
+class Apple extends Fruit                                            //Child Class
 {
     public $taste = "Sweet";
 
