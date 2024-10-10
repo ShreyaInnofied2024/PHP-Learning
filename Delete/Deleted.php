@@ -8,7 +8,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "DELETE FROM Product WHERE ProductId = :ProductId";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':ProductId', $ProductId);
+    $stmt->bindParam(':ProductId', $product_id);
     $stmt->execute();
 
     echo "Record deleted successfully";
