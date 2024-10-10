@@ -1,5 +1,5 @@
 <?php
-$product_id = $_POST['ID'];
+$product_id = $_POST['ID'];               //value received from Form
 $server_name = "localhost";
 $user_name = "root";
 $password = "password";
@@ -12,7 +12,7 @@ try {
     $stmt->bindParam(':ProductId', $product_id);
     $stmt->execute();
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($product) {
+    if ($product) {                                     //if product found create Form to take inputs for other data.
         echo '<h2>Update Product</h2>';
         echo '<form action="Updated.php" method="post">';
         echo 'ProductId: <input type="text" name="productId"<br>';
@@ -22,7 +22,7 @@ try {
         echo '<input type="submit">';
         echo '</form>';
     } else {
-        echo "Product not found.";
+        echo "Product not found.";                 //if product not found
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
